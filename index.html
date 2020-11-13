@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modal Popup in HTML and CSS</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<div class="wrapper">
+	<button class="cancel_btn">Cancel my Account</button>
+
+	<div class="modal_popup">
+		<div class="bg_shadow"></div>
+		<div class="popup">
+			<div class="popup_head">
+				Do you want to cancel your account?
+
+				<button class="close_btn"></button> 
+			</div>
+			<div class="popup_body">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. 
+			</div>
+			<div class="popup_foot">
+				<button class="popup_btn popup_cancel_btn">Cancel</button>
+				<button class="popup_btn popup_confirm_btn">Confirm</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+	var cancel_btn = document.querySelector(".cancel_btn");
+	var modal_popup = document.querySelector(".modal_popup");
+
+	var close_btn = document.querySelector(".close_btn");
+	var popup_cancel_btn = document.querySelector(".popup_cancel_btn");
+	
+
+	cancel_btn.addEventListener("click", function(){
+		modal_popup.classList.add("active");
+	})
+
+	close_btn.addEventListener("click", function(){
+		modal_popup.classList.remove("active");
+	})
+	popup_cancel_btn.addEventListener("click", function(){
+		modal_popup.classList.remove("active");
+	})
+</script>
+
+</body>
+</html>
